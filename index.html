@@ -10,6 +10,8 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -24,21 +26,24 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                   alt="cloudy"
                 />
-                <strong>19</strong>
-                <span class="units">°C | <a href="#">°F</a></span>
+                <strong id="temperature"></strong>
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span
+                >
               </div>
             </div>
             <div class="col-4">
               <ul>
-                <li>Humidity: 78%</li>
-                <li>Wind: 14 km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
             <div class="col-4">
-              <h1>Rotterdam</h1>
+              <h1 id="city"></h1>
               <ul>
-                <li>Wednesday 03:00</li>
-                <li>Cloudy</li>
+                <li>Last updated: <span id="date"></span></li>
+                <li id="description"></li>
               </ul>
             </div>
           </div>
@@ -51,6 +56,6 @@
         </small>
       </div>
     </div>
-    <script src="src/index.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>

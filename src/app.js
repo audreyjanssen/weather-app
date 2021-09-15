@@ -35,10 +35,21 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].main);
 }
 
 let apiKey = "893886e4043b145eed504f35245dfbcc";
-let city = "Dubai";
+let city = "Lisbon";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 let dateElement = document.querySelector("#date");

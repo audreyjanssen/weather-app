@@ -38,7 +38,8 @@ function displayWeather(response) {
 }
 
 let apiKey = "893886e4043b145eed504f35245dfbcc";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Rotterdam&appid=${apiKey}&units=metric`;
+let city = "Dubai";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();

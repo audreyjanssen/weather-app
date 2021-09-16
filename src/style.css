@@ -34,8 +34,13 @@ li {
   border-radius: 7px;
 }
 
+.search-form {
+  margin: 10px 10px 30px 10px;
+}
+
 .current-temperature img {
-  margin-right: 10px;
+  position: relative;
+  top: -10px;
   width: 60px;
   height: 60px;
 }

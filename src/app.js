@@ -48,12 +48,22 @@ function displayWeather(response) {
     .setAttribute("alt", response.data.weather[0].main);
 }
 
-let apiKey = "893886e4043b145eed504f35245dfbcc";
-let city = "Lisbon";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function searchCity(city) {
+  let apiKey = "893886e4043b145eed504f35245dfbcc";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function submit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = dateInput(currentTime);
 
-axios.get(apiUrl).then(displayWeather);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", submit);
+
+searchCity(Amsterdam)

@@ -19,14 +19,32 @@
     <div class="container">
       <div class="wrapper">
         <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Go"
+                  class="form-control btn btn-primary shadow-sm"
+                  id="search-city"
+                />
+              </div>
+            </div>
+          </form>
           <div class="row">
             <div class="col-4">
-              <div class="clearfix current-temperature">
-                <img
-                  src="#"
-                  alt="cloudy"
-                  id="icon"
-                />
+              <div class="current-temperature">
+                <img src="#" alt="cloudy" id="icon" class="float-left" />
                 <strong id="temperature"></strong>
                 <span class="units">
                   <a href="#" id="celsius-link">°C</a> |

@@ -1,10 +1,11 @@
 body {
   font-family: "Google Sans", arial, sans-serif;
+  background: #f9f6ff;
 }
 
 h1 {
   color: #878787;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
   line-height: 26px;
   margin-bottom: 0;
@@ -18,9 +19,13 @@ ul {
 li {
   list-style: none;
   color: #878787;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+}
+
+small {
+  padding-left: 10px;
 }
 
 .wrapper {
@@ -32,6 +37,7 @@ li {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 7px;
+  background: #ffffff;
 }
 
 .search-form {
@@ -57,4 +63,55 @@ li {
   position: relative;
   font-size: 14px;
   top: -25px;
+}
+
+.current-temperature .active {
+  color: black;
+  cursor: default;
+}
+
+.current-temperature .active:hover {
+  text-decoration: none;
+}
+
+.celsius {
+  text-decoration: none;
+}
+
+.fahrenheit {
+  text-decoration: none;
+}
+
+.celsius:hover {
+  text-decoration: underline;
+}
+
+.fahrenheit:hover {
+  text-decoration: underline;
+}
+
+.current-city {
+  margin-left: 10px;
+  padding-right: 0;
+}
+
+.current-temperature {
+  padding: 0;
+}
+
+.current-data {
+  padding: 0;
+}
+
+.btn {
+  background: #f48db4;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  border: 1px solid #f48db4;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #f48db4;
+  border: 1px solid #f48db4;
 }

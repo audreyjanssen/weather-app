@@ -12,6 +12,13 @@
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -21,22 +28,30 @@
         <div class="weather-app">
           <form class="search-form" id="search-form">
             <div class="row">
-              <div class="col-9">
+              <div class="col-6">
                 <input
                   type="search"
                   placeholder="Type a city.."
                   autofocus="on"
                   autocomplete="off"
                   id="city-input"
-                  class="form-control shadow-sm"
+                  class="form-control search-query shadow-sm"
                 />
               </div>
               <div class="col-3">
                 <input
                   type="submit"
-                  value="Go"
+                  value="Search"
                   class="form-control btn btn-primary shadow-sm"
                   id="search-city"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Current location"
+                  class="form-control btn btn-primary shadow-sm"
+                  id="current-location"
                 />
               </div>
             </div>

@@ -1,10 +1,10 @@
 body {
-  font-family: "Google Sans", arial, sans-serif;
- 
+  font-family: "Sarabun", sans-serif;
+  background: #f9f8ff;
 }
 
 h1 {
-  color: #878787;
+  color: #288684;
   font-size: 28px;
   font-weight: 400;
   line-height: 26px;
@@ -18,14 +18,20 @@ ul {
 
 li {
   list-style: none;
-  color: #878787;
-  font-size: 14px;
+  color: #288684;
+  opacity: 0.6;
+  font-size: 15px;
   font-weight: 400;
   line-height: 16px;
 }
 
 small {
   padding-left: 10px;
+}
+
+input.search-query {
+  background-color: #f9f8ff;
+  border-color: #8795ff;
 }
 
 .wrapper {
@@ -35,7 +41,7 @@ small {
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid #8795ff;
   border-radius: 7px;
   background: #ffffff;
 }
@@ -52,7 +58,7 @@ small {
 }
 
 .current-temperature strong {
-  color: rgb(33, 33, 33);
+  color: black;
   display: inline;
   font-size: 48px;
   font-weight: 400;
@@ -78,33 +84,34 @@ small {
 }
 
 .btn {
-  background: #ea6e4b;
+  background: #8795ff;
   color: #fff;
   transition: all 200ms ease-in-out;
-  border: 1px solid #ea6e4b;
+  border: 1px solid #8795ff;
 }
 
 .btn:hover {
-  background: transparent;
-  color: #ea6e4b;
-  border: 1px solid #ea6e4b;
+  background: #f9f8ff;
+  color: #8795ff;
+  border: 1px solid #8795ff;
 }
 
 .weather-forecast {
   margin-top: 40px;
   text-align: center;
-  color: black;
+  color: #288684;
 }
 
 .weather-forecast-date {
-  font-size: 14px;
+  font-size: 15px;
+  color: black;
   opacity: 0.6;
 }
 
 .weather-forecast-temperatures {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }

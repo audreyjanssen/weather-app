@@ -23,6 +23,36 @@ function dateInput(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+ 
+  let days = ["Wed", "Thu", "Fri", "Sat"];
+  
+  let forecastHTML = `<div class="row">`;
+    days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt=""
+                  width="40"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">21°</span>
+                  <span class="weather-forecast-temperature-min">13°</span>
+                </div>
+              </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -67,8 +97,8 @@ function unitFahrenheit(event) {
   let tempElement = document.querySelector("#temperature");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
-  celsiusLink.classList.remove("active")
-  fahrenheitLink.classList.add("active")
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function unitCelsius(event) {
@@ -95,3 +125,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", unitCelsius);
 
 searchCity("Amsterdam");
+displayForecast();

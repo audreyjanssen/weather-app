@@ -1,6 +1,6 @@
 body {
   font-family: "Google Sans", arial, sans-serif;
-  background: #f9f6ff;
+ 
 }
 
 h1 {
@@ -65,34 +65,8 @@ small {
   top: -25px;
 }
 
-.current-temperature .active {
-  color: black;
-  cursor: default;
-}
-
-.current-temperature .active:hover {
-  text-decoration: none;
-}
-
-.celsius {
-  text-decoration: none;
-}
-
-.fahrenheit {
-  text-decoration: none;
-}
-
-.celsius:hover {
-  text-decoration: underline;
-}
-
-.fahrenheit:hover {
-  text-decoration: underline;
-}
-
 .current-city {
-  margin-left: 10px;
-  padding-right: 0;
+  margin-left: 20px;
 }
 
 .current-temperature {
@@ -100,35 +74,35 @@ small {
 }
 
 .current-data {
-  padding: 0;
+  padding: 3px;
 }
 
 .btn {
-  background: #f48db4;
+  background: #ea6e4b;
   color: #fff;
   transition: all 200ms ease-in-out;
-  border: 1px solid #f48db4;
+  border: 1px solid #ea6e4b;
 }
 
 .btn:hover {
   background: transparent;
-  color: #f48db4;
-  border: 1px solid #f48db4;
+  color: #ea6e4b;
+  border: 1px solid #ea6e4b;
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   color: black;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.6;
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .weather-forecast-temperature-min {

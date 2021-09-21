@@ -101,8 +101,6 @@ function displayWeather(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].main);
 
-  celsiusTemp = response.data.main.temp;
-
   getForecast(response.data.coord);
 }
 
@@ -118,36 +116,11 @@ function submit(event) {
   searchCity(city);
 }
 
-function unitFahrenheit(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function unitCelsius(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = dateInput(currentTime);
 
-let celsiusTemp = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", unitFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", unitCelsius);
 
 searchCity("Amsterdam");
